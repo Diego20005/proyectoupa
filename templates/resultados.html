@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Resultados del Test Vocacional</h1>
+  <h2 class="text-center mb-4">{{ nombre }}</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Resultados detallados</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Área</th>
+                <th>Puntuación</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for area, puntuacion in resultados.items() %}
+              <tr>
+                <td>{{ area }}</td>
+                <td>{{ "%.2f"|format(puntuacion) }}%</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <a href="{{ url_for('download_pdf') }}" class="btn btn-primary btn-lg" download="">Descargar resultados en PDF</a>
+  </div>
+</div>
+{% endblock %}

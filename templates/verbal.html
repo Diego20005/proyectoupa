@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+        }
+        .options label {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Responde el siguiente cuestionario 0 es muy malo y 4 es muy bueno</h1>
+
+    <h1>¿QUE TANTO TE GUSTARIA?</h1>
+    <form action="/verbal_respuesta" method="POST">
+        
+        <div class="question">
+            <h2>1. Escribir cuentos, crónicas o articulos</h2>
+            <div class="options">
+                <label><input type="radio" name="q1" value="0"> 0</label>
+                <label><input type="radio" name="q1" value="1"> 1</label>
+                <label><input type="radio" name="q1" value="2"> 2</label>
+                <label><input type="radio" name="q1" value="3"> 3</label>
+                <label><input type="radio" name="q1" value="4"> 4</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>2. Leer obras literarias</h2>
+            <div class="options">
+                <label><input type="radio" name="q2" value="0"> 0</label>
+                <label><input type="radio" name="q2" value="1"> 1</label>
+                <label><input type="radio" name="q2" value="2"> 2</label>
+                <label><input type="radio" name="q2" value="3"> 3</label>
+                <label><input type="radio" name="q2" value="4"> 4</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>3. Hacer versos para una publicación</h2>
+            <div class="options">
+                <label><input type="radio" name="q3" value="0"> 0</label>
+                <label><input type="radio" name="q3" value="1"> 1</label>
+                <label><input type="radio" name="q3" value="2"> 2</label>
+                <label><input type="radio" name="q3" value="3"> 3</label>
+                <label><input type="radio" name="q3" value="4"> 4</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>4. Representar un papel en una obra de teatro</h2>
+            <div class="options">
+                <label><input type="radio" name="q4" value="0"> 0</label>
+                <label><input type="radio" name="q4" value="1"> 1</label>
+                <label><input type="radio" name="q4" value="2"> 2</label>
+                <label><input type="radio" name="q4" value="3"> 3</label>
+                <label><input type="radio" name="q4" value="4"> 4</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>5. Participar en un concurso de oratorio </h2>
+            <div class="options">
+                <label><input type="radio" name="q5" value="0"> 0</label>
+                <label><input type="radio" name="q5" value="1"> 1</label>
+                <label><input type="radio" name="q5" value="2"> 2</label>
+                <label><input type="radio" name="q5" value="3"> 3</label>
+                <label><input type="radio" name="q5" value="4"> 4</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>6. Te gustaria trabajar como escritor de una periódico o empresa editorial </h2>
+            <div class="options">
+                <label><input type="radio" name="q6" value="0"> 0</label>
+                <label><input type="radio" name="q6" value="1"> 1</label>
+                <label><input type="radio" name="q6" value="2"> 2</label>
+                <label><input type="radio" name="q6" value="3"> 3</label>
+                <label><input type="radio" name="q6" value="4"> 4</label>
+            </div>
+        </div>
+
+
+
+        
+        <a href="/art_plastico">
+
+        <button type="submit" class="submit-btn">Enviar respuestas</button>
+</a>
+    </form>
+</div>
+
+</body>
+</html>
